@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Weathercard from "./weathercard";
+import Weathercard from "./weatherCard";
 import "./style.css";
 
 const Temp = () => {
-  const [searchValue, setSearchValue] = useState("pune");
+  const [searchValue, setSearchValue] = useState("Bhavnagar");
   const [tempInfo, setTempInfo] = useState({});
 
   const getWeatherInfo = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid={WriteYourAPIKey}`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=42f166b588462a3a9e2d68300b95b2d4`;
 
       let res = await fetch(url);
       let data = await res.json();
